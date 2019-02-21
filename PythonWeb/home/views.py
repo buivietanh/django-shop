@@ -7,8 +7,8 @@ def home(request):
     #     username = request.user.username
     
     username = request.user.username
-    title = 'Đây là trang home'
-    content = 'Xin chào: ' + username
+    title = username
+    content = 'Đây là trang home'
     template = 'pages/home.html'
     context = locals()
     return render(request, template, context)
