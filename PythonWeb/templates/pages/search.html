@@ -1,0 +1,22 @@
+
+  {% extends 'base.html'%}
+
+  {% block home%}
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    {% include 'pages/jumbotron.html'%}
+  </div>
+
+  <div class="container">
+    <h1>Search for: {{ query}}</h1>
+    {% if results%}
+    {% for item in results %}
+        {{ item.title }}
+    {% endfor %}
+    {% else %}
+    <p>No result!</p>
+    {% endif %}
+
+  </div> <!-- /container -->
+
+  {%endblock%}
